@@ -1,11 +1,19 @@
 const express = require('express');
-//const cors = require('cors');
+const { planets } = require('./data.js');
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.json({ greeting: 'Hello World!' })
+})
+
+app.get('/astronomy', (req, res) => {
+    res.json({ robot_message: 'comet-incoming' })
+})
+
+app.get('/planets', (req, res) => {
+    res.json({ results: planets })
 })
 
 
