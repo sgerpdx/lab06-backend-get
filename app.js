@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config()
 const express = require('express');
 const { planets } = require('./data.js');
 const app = express();
