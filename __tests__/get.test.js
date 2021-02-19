@@ -1,6 +1,5 @@
 const { app } = require('../app.js');
 const supertest = require('supertest');
-//const { request } = require('express');
 const { planets } = require('../data.js');
 const request = supertest(app);
 
